@@ -1,0 +1,153 @@
+<%- include('../partials/Boilerplate') %>
+<%- include('../partials/Navbar') %>
+<style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            font-family: sans-serif;
+        }
+       .container{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-rows:auto auto auto 100vh auto 1px auto 100px;
+       }
+        .last{
+        background-image: url('https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-cta-image-bg.jpg');
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-style: solid;
+        border-width: 0px 40px;
+        border-color: white;
+    }
+   .part{
+        border-style: solid;
+        border-width: 30px 140px;
+        border-color: white;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(400px,auto));
+        grid-auto-rows: minmax(500px,auto);
+        column-gap: 20px;
+   }
+   .brand{
+        border-style: solid;
+        border-width: 20px 160px;
+        border-color: white;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(180px,auto));
+        grid-auto-rows: minmax(110px,auto);
+        column-gap: 20px;
+      }
+      .item img{
+        width: 410px;
+        height: 400px;
+      }
+      .social{
+        margin-left: 22%;
+      }
+      .card img{
+        height:30px;
+        margin-left: 1%;
+      }
+      .advantage{
+        border-style: solid;
+        border-width: 20px 100px;
+        border-color: white;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(400px,auto));
+        grid-auto-rows: minmax(100px,auto);
+        column-gap: 20px;
+      }
+      .features{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 2px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .main{
+        border-style: solid;
+        border-width: 80px;
+        border-color: white;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(500px,auto));
+        grid-auto-rows: minmax(500px,auto);
+        column-gap: 20px;
+      }
+      .view{
+        letter-spacing: 2px;
+      }
+      .related{
+        border-style: solid;
+        border-width: 40px 80px 40px 80px;
+        border-color: white;
+      }
+      .related_product{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(400px,auto));
+        grid-auto-rows: minmax(400px,auto);
+        column-gap: 30px;
+      }
+      
+      .product img{
+        width: 410px;
+        height: 400px;
+        display: block;
+        margin: auto;
+      }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="main">
+           
+            <div class="view">
+                <p style="font-size: 18px;color: #6E7051;">Men, Sneaker</p>
+                <p style="font-size: 30px;margin-top: 3%;"></p>
+                <p style="font-size: 27px;margin-top: 4%;color: #979A9B;font-weight: 600;">$</p>
+                <p style="position: relative;bottom: 5%;left: 9%;font-size: 18px;color: #979A9B;">& Free Shipping</p>
+              
+                <p></p>
+                <p style="font-size: 18px;color: #979A9B;">Auctor eros suspendisse tellus venenatis sodales purus
+                <p style="font-size: 18px;color: #979A9B;margin-top: 1%;"> non pellentesque amet, nunc sit eu, enim fringilla egestas</p>
+                <p style="font-size: 18px;color: #979A9B;margin-top: 1%;"> pulvinar odio feugiat consectetur egestas magna pharetra</p>
+                <p style="font-size: 18px;color: #979A9B;margin-top: 1%;">cursus risus, lectus enim eget eu et lobortis faucibus</p>
+                    
+            </div>
+           
+        </div>
+        <button  style="font-size: 20px;font-weight: 700; width: 35%;height: 45px;border-radius: 5px; display: block;margin: auto;position: relative;bottom: 500%;left: 16%;"><a href="">View Cart</a></button>        
+        <div class="related">
+            <p style="font-size: 35px;color: #262B2C;font-weight: 600;margin-left: 1%;margin-bottom: 2%;">Related Products</p>
+            <div class="related_product">
+
+            </div>
+        </div>
+        <div class="last">
+            <p style="display: flex;justify-content: center;align-items: center;font-size: 64px;color: white;font-weight: 600;margin-top:20%;">Better for People & the Planet</p>
+            <p style="display: flex;justify-content: center;align-items: center;font-size: 18px;color: white;">Ut eget at et aliquam sit quis nisl, pharetra et ac pharetra est dictum in vulputate</p>
+        </div>
+        <div class="advantage">
+            <div class="features">
+                <i class="fa-solid fa-lock"></i>
+                <p style="margin-left: 3%;">Secure Payment</p>
+            </div>
+            <div class="features">
+                <i class="fas fa-shipping-fast"></i>
+                <p style="margin-left: 3%;">Express Shipping</p>
+            </div>
+            <div class="features">
+                <i class="fa-solid fa-rotate"></i>
+                <p style="margin-left: 3%;">Free Return</p>
+            </div>
+        </div>
+        <hr style="width: 80%;display: block;margin: auto;">
+
+        <%- include('../partials/Footer') %>
+    </div>

@@ -1,0 +1,217 @@
+<%- include('../partials/Boilerplate1') %>
+<!-- <%- include('../partials/Navbar') %> -->
+
+<style>
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.cart_heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.set_image {
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.total_price {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.col-4 {
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.col-4 input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.col-4 button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.col-4 button:hover {
+    background-color: #555;
+}
+
+.col-4 table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.col-4 th, .col-4 td {
+    padding: 10px;
+    background-color: #f7f7f7;
+    text-align: left;
+}
+
+.col-4 th:nth-child(2), .col-4 td:nth-child(2) {
+    text-align: right;
+}
+
+.checkout-button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #45a049;
+}
+</style>
+
+<% let c = 1 %>
+<h1 class="cart_heading">My Cart</h1>
+<div class="container">
+<div class="row">
+    <div class="col-8">
+        <table>
+            <thead>
+                <tr>
+                    <th>Serial No</th>
+                    <th>Image</th>
+                    <th>Details</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cart_items">
+               
+                <!-- Additional rows can be added here -->
+            </tbody>
+        </table>
+    </div>
+    <div class="col-4">
+        <input type="text" id="coupon_box" placeholder="Enter Coupon Code">
+        <button class="coupon_button">Submit</button>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Shipping Cost</th>
+                    <td id="shipping_cost">$45</td>
+                </tr>
+                <tr>
+                    <th>Discount</th>
+                    <td id="discount">$30</td>
+                </tr>
+                <tr>
+                    <th>Tax</th>
+                    <td id="tax">$18</td>
+                </tr>
+                <tr>
+                    <th>Estimated Total</th>
+                    <td id="estimated_total">$0</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/checkout" class="checkout-button">Checkout</a>
+    </div>
+</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const quantitySelectors = document.querySelectorAll('.quantity');
+    const estimatedTotalElement = document.getElementById('estimated_total');
+    const shippingCost = parseFloat(document.getElementById('shipping_cost').textContent.substring(1));
+    const discount = parseFloat(document.getElementById('discount').textContent.substring(1));
+    const tax = parseFloat(document.getElementById('tax').textContent.substring(1));
+
+    function formatCurrency(value) {
+        return `$${value.toFixed(2)}`;
+    }
+
+    function updateTotal() {
+        let total = 0;
+        quantitySelectors.forEach(selector => {
+            const quantity = parseInt(selector.value);
+            const price = parseFloat(selector.closest('tr').dataset.price);
+            const itemTotal = price * quantity;
+            selector.closest('tr').querySelector('.item-total').textContent = formatCurrency(itemTotal);
+            total += itemTotal;
+        });
+        total += shippingCost - discount + tax;
+        estimatedTotalElement.textContent = formatCurrency(total);
+    }
+
+    quantitySelectors.forEach(selector => {
+        selector.addEventListener('change', updateTotal);
+    });
+
+    updateTotal();
+});
+</script>
+
+

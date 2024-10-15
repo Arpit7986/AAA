@@ -1,0 +1,97 @@
+<%- include('../partials/Boilerplate') %>
+
+<style>
+    .container {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+    }
+    
+    .outer {
+        background-color: #DCFCE7;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px auto;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 4px solid #32cd32;
+        background-color: #DCFCE7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .mini-container {
+        max-width: 350px;
+        height: auto;
+        margin: 30px auto;
+        padding: 10px;
+        border-radius: 8px;
+        border: 0.5px solid lightgrey;
+    }
+    
+    table {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    td {
+        padding: 8px;
+        color: #6E6E77;
+        letter-spacing: 1px;
+    }
+
+    /* Button styling */
+    button {
+        background-color: #22C55E; /* Green background */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #16A34A; /* Darker green on hover */
+    }
+</style>
+
+<div class="container">
+    <div class="outer">
+        <div class="circle"><i class="fa-solid fa-check" style="font-size: 35px;color: rgb(34, 197, 94);"></i></div> 
+    </div>
+    <h1 style="font-size: 40px;font-weight: 700;">Payment Successful</h1>
+    <p style="font-size: 18px;color: #6E6E77;letter-spacing: 1px;">Thank you for your payment. Your order is being processed, and you will receive a confirmation email shortly.</p>
+    <div class="mini-container">
+        <h1>Order Details</h1>
+        <table>
+            <tr>
+                <td>Order Number</td>
+                <td>OE31b70H</td>
+            </tr>
+            <tr>
+                <td>Amount Paid</td>
+                <td>$150.00</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>November 23, 2023</td>
+            </tr>
+        </table>
+        <button>Go to Homepage</button>
+    </div>
+</div>

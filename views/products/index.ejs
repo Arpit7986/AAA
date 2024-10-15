@@ -1,0 +1,348 @@
+<%- include('../partials/Boilerplate') %>
+<%- include('../partials/Navbar') %>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            font-family: sans-serif;
+        }
+       .container{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-rows: 100vh auto auto 100vh auto auto auto auto auto 100vh auto 1px auto 100px;
+       }
+       .hero{
+            background-image: url('https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-hero-image-bg.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-style: solid;
+            border-width: 0px 40px 0px 40px;
+            border-color: white;
+        }
+       .shoe{
+            margin-top: 80px;
+            background-image: url('https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-how-shoes-are-made-image.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            border-style: solid;
+            border-color: white;
+            border-width: 0px 40px 0px 40px;
+        }
+        .Men_Women{
+                margin-top: 100px;
+                border-style: solid;
+                border-color: white;
+                border-width: 0px 40px 0px 40px;
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(500px,auto));
+                grid-auto-rows: minmax(500px,auto);
+                column-gap: 50px;
+        }
+        .box1{
+            background-image: url('https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-shop-men-image-thumbnail.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .box2{
+            background-image: url('https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-shop-women-image-tumbnail.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        } 
+        .earth{
+            background-color: #dadada;
+            border-style: solid;
+            border-color: white;
+            border-width: 80px 40px 40px 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(600px,auto));
+            grid-auto-rows: minmax(600px,auto);
+            column-gap: 20px;
+            font-size: 18px;
+            letter-spacing: 2px;
+            color: #97989B;
+        }
+        .earth img{
+            border-radius: 50%;
+            border-style: dotted;
+            color: #97989B;
+        }
+            .last{
+                background-image: url('https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-cta-image-bg.jpg');
+                background-position:center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-style: solid;
+                border-width: 0px 40px;
+                border-color: white;
+            }
+        .main{
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(400px,auto));
+                grid-auto-rows: minmax(550px,auto);
+                column-gap: 30px;
+                row-gap: 40px;
+            }
+            
+        
+        .review{
+                border-style: solid;
+                border-width: 90px 150px 80px 150px;
+                border-color: white;
+                
+        }
+        .review_box{
+                margin-top: 4%;
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(350px,auto));
+                grid-auto-rows: minmax(300px,auto);
+                row-gap: 20px;
+                column-gap: 30px ;
+            
+        }
+        
+        .part{
+                border-style: solid;
+                border-width: 30px 140px;
+                border-color: white;
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(400px,auto));
+                grid-auto-rows: minmax(500px,auto);
+                column-gap: 20px;
+        }
+        .footer{
+                border-style: solid;
+                border-width: 80px 110px 80px 110px;
+                border-color: white;
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(300px,auto));
+                grid-auto-rows: minmax(300px,auto);
+                column-gap: 30px;
+        }
+        .social{
+                letter-spacing: 2px;
+        }
+        .card{
+            display: flex;
+            background-color: #F1F1EF;
+            justify-content: center;
+            align-items: center;
+        }
+        .brand{
+                border-style: solid;
+                border-width: 20px 160px;
+                border-color: white;
+                display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(180px,auto));
+                grid-auto-rows: minmax(110px,auto);
+                column-gap: 20px;
+        }
+        .product{
+            border-style: solid;
+            border-width: 100px 100px 0px 130px;
+            border-color: white;
+        }
+        .item img{
+            width: 410px;
+            height: 400px;
+        }
+        .social{
+            margin-left: 22%;
+        }
+        .card img{
+            height:30px;
+            margin-left: 1%;
+        }
+        .advantage{
+            border-style: solid;
+            border-width: 20px 100px;
+            border-color: white;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(400px,auto));
+            grid-auto-rows: minmax(100px,auto);
+            column-gap: 20px;
+        }
+        .features{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 2px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+       
+
+        </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="hero">
+            <p style="font-size: 72px;color: white;margin-top: 15%;margin-left: 10%;font-weight: 700;">Love the Planet</p>
+            <p style="font-size: 72px;color: white;margin-left: 10%;font-weight: 700;">we walk on</p> 
+            <p  style="font-size: 18px;color: white;margin-left: 10%;margin-top: 2%;">Bibendum fermentum, aenean donec pretium aliquam blandit</p>
+            <p style="font-size: 18px;color: white;margin-left: 10%;margin-top: 1%;">tempor imperdiet arcu arcu ut nunc in dictum mauris at ut.</p>
+        </div>
+
+        <div class="brand">
+            <div class="comapny_logo">
+                <p style="color: #262B2C;font-size: 14px;line-height: 100px;font-weight: 600;place-items: center;margin: 0px 40px 0px 40px;">AS SEEN IN :</p>
+            </div>
+            <div class="comapny_logo">
+                <img src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-featured-in-logo-5.svg" alt="">
+            </div>
+            <div class="comapny_logo">
+                <img src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-featured-in-logo-4.svg" alt="">
+            </div>
+           <div class="comapny_logo">
+            <img src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-featured-in-logo-3.svg" alt="">
+           </div>
+           <div class="comapny_logo">
+            <img src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-featured-in-logo-2.svg" alt="">
+           </div>
+           <div class="comapny_logo">
+            <img src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-featured-in-logo-1.svg" alt="">
+           </div>
+            
+            
+        </div>
+
+        <div class="part">
+            <div class="two">
+                <img src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-home-about-image.jpg" alt="">
+            </div>
+            <div class="two">
+                <p style="color: #f6aa28;font-size: 14px;letter-spacing: 2px;margin-top: 100px;margin-bottom: 30px;">ABOUT US</p>
+                <p style="color: #262B2C;font-size: 40px;">Selected materials
+                <p style="color: #262B2C;font-size: 40px;">designed for comfort</p> 
+                <p style="color: #262B2C;font-size: 40px;margin-bottom: 25px;">and sustainability</p> 
+                <p style="color: #979A9B;font-size: 18px;margin: 0px 0px 18px;">Nullam auctor faucibus ridiculus dignissim sed et</p>
+                <p style="color: #979A9B;font-size: 18px;margin: 0px 0px 18px;"> auctor sed eget auctor nec sed elit nunc, magna non</p>
+                <p style="color: #979A9B;font-size: 18px;margin: 0px 0px 18px;"> urna amet ac neque ut quam enim pretium risus</p>
+                <p style="color: #979A9B;font-size: 18px;margin: 0px 0px 55px;">gravida ullamcorper adipiscing at ut magna.</p>
+                <p style="font-size: 14px;color: #262B2C;font-weight: 600;border-style: solid;border-width: 0px 0px 2px 0px;border-color: #f6aa28;width: 90px;">READ MORE</p>
+            </div>
+        </div>
+
+        <div class="shoe"></div>
+
+    <div class="product">
+            <p style="font-size: 14px;color: black;display: flex;justify-content: end;align-items: center; border-style: solid;border-width: 0px 0px 2px 0px;border-color: #f6aa28;width: 215px;margin-left: 83%;letter-spacing: 2px;">VIEW ALL BEST SELLERS</p>
+            <p style="font-size: 26px;color: #262B2C;font-weight: 600;position: relative;bottom: 28px;">Our Best Seller</p>
+            <div class="main">
+                <%for(let Shoes of product){%>
+                    <div class="item">
+                        <button type="submit" style="background-color: black;color: white;width: 100%; height: 30px;position: relative;top: 72%;"><a style="color: white;font-size: 18px;font-weight: 600;" href="/product/<%=Shoes._id%>">Quick View</a></button>
+                        <img  src="<%=Shoes.img1%>" alt="">
+                        <p style="display: flex;justify-content: center;align-items: center;margin-top: 8%;font-size: 18px;font-weight: 600;"><%=Shoes.name%></p>
+                        <p style="display: flex;justify-content: center;align-items: center;margin-top: 2%;font-size: 17px;color: #97989B;">$<%=Shoes.price%></p>
+                        <p style="display: flex;justify-content: center;align-items: center;margin-top: 2%;"><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></p>
+                    </div>
+                    <%}%>
+            </div>
+    </div>
+
+        <div class="Men_Women">
+            <div class="box1">
+              <p style="font-size: 40px;margin:30% 45% 0% 45%;color: #F1F1EF;font-weight: 700;">MEN</p>
+              <p class="change" style="font-size: 14px;border: 2px solid #F1F1EF;margin: 3% 0% 0% 40%;color: #F1F1EF;width: 150px;height: 50px;padding: 14px 0px 14px 25px;letter-spacing: 2px;font-weight: 600;">SHOP MEN</p>
+            </div>
+            <div class="box2">
+                <p style="font-size: 40px;margin:30% 30% 0% 40%;color: #F1F1EF;font-weight: 700;">WOMEN</p>
+                <p class="change" style="font-size: 14px;border: 2px solid #F1F1EF;margin: 3% 0% 0% 40%;color: #F1F1EF;width: 150px;height: 50px;padding: 14px 0px 14px 17px;letter-spacing: 2px;font-weight: 600;">SHOP WOMEN</p>
+              </div>
+            
+        </div>
+
+        <div class="product">
+            <p style="font-size: 14px;color: black;display: flex;justify-content: end;border-style: solid;border-width: 0px 0px 2px 0px;border-color: #f6aa28;width: 215px;margin-left: 83%;letter-spacing: 2px;">VIEW ALL BEST SELLERS</p>
+            <p style="font-size: 26px;color: #262B2C;font-weight: 600;position: relative;bottom: 28px;">New Arrivals</p>
+            <div class="main">
+                <%for(let Shoes of arrival){%>
+                    <div class="item">
+                        <button type="submit" style="background-color: black;color: white;width: 100%; height: 30px;position: relative;top: 72%;"><a style="color: white;font-size: 18px;font-weight: 600;" href="/product/<%=Shoes._id%>">Quick View</a></button>
+                        <img  src="<%=Shoes.img1%>" alt="">
+                        <p style="display: flex;justify-content: center;align-items: center;margin-top: 8%;font-size: 18px;font-weight: 600;"><%=Shoes.name%></p>
+                        <p style="display: flex;justify-content: center;align-items: center;margin-top: 2%;font-size: 17px;color: #97989B;">$<%=Shoes.price%></p>
+                        <p style="display: flex;justify-content: center;align-items: center;margin-top: 2%;"><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></p>
+                    </div>
+                    <%}%>
+            </div>
+    </div>
+
+        <div class="earth">
+            <div class="earth_divide">
+                <p style="display: flex;justify-content: center;align-items: center;margin-top: 20%;">Eu eget felis erat mauris aliquam mattis lacus, arcu leo</p>
+                <p style="display: flex;justify-content: center;align-items: center;margin-top: 2%;margin-right: 3%;">aliquam sapien pulvinar laoreet vulputate sem aliquet</p>
+                <p style="display: flex;justify-content: center;align-items: center;margin-top: 2%;">phasellus felis egestas felis, est, vulputate morbi massa</p>
+                <p style="display: flex;justify-content: center;align-items: center;margin-top: 2%;margin-right: 3%;">mauris erat aliquam felis egestas vestibulum dui odio.</p>
+                <img style="margin-top: 15%;margin-left: 20%;" src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-badge-3.svg" alt="">
+                <img style="margin-left: 5%;" src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-badge-2.svg" alt="">
+                <img style="margin-left: 5%;" src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-badge-1.svg" alt="">
+            </div>
+            <div class="earth_divide">
+                <img style="display:block;margin: auto;margin-top: 18%;"  src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-recycled-circle-iamge.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="review">
+            <p style="font-size: 45px;display: flex;justify-content: center;align-items: center;font-weight: 700;color: #262B2C;margin-top: 3%;">Our Customers speak for us</p>
+            <div class="review_box">
+                <div class="feedback">
+                    <p style="margin: 8% 0% 0% 8%"><i style="color:#f6aa28;"class="fa-solid fa-star"></i><i style="color:#f6aa28;"class="fa-solid fa-star"></i><i style="color:#f6aa28;"class="fa-solid fa-star"></i><i style="color:#f6aa28;"class="fa-solid fa-star"></i><i style="color:#f6aa28;"class="fa-solid fa-star"></i></p>
+                    <p style="margin: 8% 0% 0% 8%;font-size: 18px;font-weight: 600;">“Felis semper duis massa scelerisque</p>
+                    <p style="margin: 3% 0% 0% 8%;font-size: 18px;font-weight: 600;">ac amet porttitor ac tellus venenatis</p>
+                    <p style="margin: 3% 0% 0% 8%;font-size: 18px;font-weight: 600;">aliquam varius mauris integer”</p>
+                    <img style="border-radius: 50%;margin: 8% 0% 0% 8%;" src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-customer-avatar-image-3.jpg" alt="">
+                    <p style="letter-spacing: 2px;margin: 0% 0% 0% 25%;position: relative;bottom: 11%;color: #6e7051;">JULIA KEYS</p>
+                </div>
+                <div class="feedback">
+                    <p style="margin: 8% 0% 0% 8%"><i style="color:#f6aa28;"class="fa-solid fa-star"></i><i style="color:#f6aa28;"class="fa-solid fa-star"></i><i style="color:#f6aa28;"class="fa-solid fa-star"></i><i style="color:#f6aa28;"class="fa-solid fa-star"></i><i style="color:#f6aa28;"class="fa-solid fa-star"></i></p>
+                    <p style="margin: 8% 0% 0% 8%;font-size: 18px;font-weight: 600;">“Non malesuada fringilla non varius </p>
+                    <p style="margin: 3% 0% 0% 8%;font-size: 18px;font-weight: 600;">odio in id pellentesque aliquam</p>
+                    <p style="margin: 3% 0% 0% 8%;font-size: 18px;font-weight: 600;">volutpat sapien faucibus ”</p>
+                    <img style="border-radius: 50%;margin: 8% 0% 0% 8%;" src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-customer-avatar-image-2.jpg" alt="">
+                    <p style="letter-spacing: 2px;margin: 0% 0% 0% 25%;position: relative;bottom: 11%;color: #6e7051;">LUIS ADRIAN</p>
+                </div>
+                <div class="feedback">
+                    <p style="margin: 8% 0% 0% 8%"><i style="color:#f6aa28;"class="fa-solid fa-star"></i><i style="color:#f6aa28;"class="fa-solid fa-star"></i><i style="color:#f6aa28;"class="fa-solid fa-star"></i><i style="color:#f6aa28;"class="fa-solid fa-star"></i><i style="color:#f6aa28;"class="fa-solid fa-star"></i></p>
+                    <p style="margin: 8% 0% 0% 8%;font-size: 18px;font-weight: 600;">“Tortor suspendisse tincidunt</p>
+                    <p style="margin: 3% 0% 0% 8%;font-size: 18px;font-weight: 600;">accumsan platea pellentesque hac.”</p>
+                    <img style="border-radius: 50%;margin: 8% 0% 0% 8%;" src="https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-store-customer-avatar-image-1.jpg" alt="">
+                    <p style="letter-spacing: 2px;margin: 0% 0% 0% 25%;position: relative;bottom: 11%;color: #6e7051;">MARIA ANNA</p>
+                </div>
+            </div>
+            <p style="display: flex;justify-content: center;align-items: center;margin-top: 6%;font-size: 16px;color: #97989B;font-weight: 600;">4.8 average rating from 1814 reviews</p>
+        </div>
+
+        <div class="last">
+            <p style="display: flex;justify-content: center;align-items: center;font-size: 64px;color: white;font-weight: 600;margin-top:20%;">Better for People & the Planet</p>
+            <p style="display: flex;justify-content: center;align-items: center;font-size: 18px;color: white;">Ut eget at et aliquam sit quis nisl, pharetra et ac pharetra est dictum in vulputate</p>
+        </div>
+
+        <div class="advantage">
+            <div class="features">
+                <i class="fa-solid fa-lock"></i>
+                <p style="margin-left: 3%;">Secure Payment</p>
+            </div>
+            <div class="features">
+                <i class="fas fa-shipping-fast"></i>
+                <p style="margin-left: 3%;">Express Shipping</p>
+            </div>
+            <div class="features">
+                <i class="fa-solid fa-rotate"></i>
+                <p style="margin-left: 3%;">Free Return</p>
+            </div>
+        </div>
+
+        <hr style="width: 80%;display: block;margin: auto;">
+
+    <%- include('../partials/Footer') %>
+</body>
+</html>
