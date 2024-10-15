@@ -12,9 +12,9 @@ const ejsMate=require('ejs-mate')
 const bodyParser = require('body-parser');
 const path=require('path')
 const GoogleAuthenticationRoutes=require('./routes/googleAuthentication')
-const AuthenticationRoutes=require('./routes/authenticationRoutes')
+// const AuthenticationRoutes=require('./routes/authenticationRoutes')
 const ProductRoutes=require('./routes/productRoutes')
-const PaymentRoutes=require('./routes/paymentRoutes')
+// const PaymentRoutes=require('./routes/paymentRoutes')
 
 mongoose.connect(process.env.DB_URL)
 .then(()=>{
