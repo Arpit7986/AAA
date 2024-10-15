@@ -41,8 +41,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(passport.initialize());
 app.use(passport.session());
 
-// seedDB()
-// seedDB1()
+seedDB()
+seedDB1()
 
 app.use(GoogleAuthenticationRoutes)
 app.use(AuthenticationRoutes)
