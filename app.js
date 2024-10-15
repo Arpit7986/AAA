@@ -44,10 +44,8 @@ app.use(passport.session());
 seedDB()
 seedDB1()
 
-app.use(GoogleAuthenticationRoutes)
-app.use(AuthenticationRoutes)
 app.use(ProductRoutes)
-app.use(PaymentRoutes)
+
 
 const port=process.env.PORT
 app.listen(port,()=>{
